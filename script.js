@@ -71,7 +71,7 @@ function displayTransactions() {
                 <h4>${transaction.description}</h4>
                 <p>${transaction.date}</p>
             </div>
-            <div class="transaction-amount">${sign}$${Math.abs(transaction.amount).toFixed(2)}</div>
+            <div class="transaction-amount">${sign}RM ${Math.abs(transaction.amount).toFixed(2)}</div>
             <button class="delete-btn" onclick="deleteTransaction(${transaction.id})">×</button>
         `;
         
@@ -83,9 +83,9 @@ function displayTransactions() {
 function updateBalance() {
     const { total, income, expense } = calculateTotals();
     
-    balance.textContent = `RM${total.toFixed(2)}`;
-    incomeTotal.textContent = `RM${income.toFixed(2)}`;
-    expenseTotal.textContent = `RM${expense.toFixed(2)}`;
+    balance.textContent = `RM ${total.toFixed(2)}`;
+    incomeTotal.textContent = `RM ${income.toFixed(2)}`;
+    expenseTotal.textContent = `RM ${expense.toFixed(2)}`;
     
     // Change balance color based on value
     if (total < 0) {
