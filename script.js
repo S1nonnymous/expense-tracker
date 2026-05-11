@@ -83,9 +83,9 @@ function displayTransactions() {
 function updateBalance() {
     const { total, income, expense } = calculateTotals();
     
-    balance.textContent = `$${total.toFixed(2)}`;
-    incomeTotal.textContent = `$${income.toFixed(2)}`;
-    expenseTotal.textContent = `$${expense.toFixed(2)}`;
+    balance.textContent = `RM${total.toFixed(2)}`;
+    incomeTotal.textContent = `RM${income.toFixed(2)}`;
+    expenseTotal.textContent = `RM${expense.toFixed(2)}`;
     
     // Change balance color based on value
     if (total < 0) {
